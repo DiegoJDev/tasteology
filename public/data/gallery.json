@@ -1,0 +1,18 @@
+[
+  {
+    "id": "g1",
+    "thumb": "/images/g1-800.jpg",
+    "full": "/images/g1-1600.jpg",
+    "alt": "Foto 1",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "id": "g2",
+    "thumb": "/images/g2-800.jpg",
+    "full": "/images/g2-1600.jpg",
+    "alt": "Foto 2",
+    "width": 1200,
+    "height": 800
+  }
+]

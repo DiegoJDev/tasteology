@@ -1,0 +1,51 @@
+:root {
+  /* Base colors */
+  --color-bg: #0f1414;
+  --color-text: #ffffff;
+  --color-accent: #cf1430;
+
+  /* Typography */
+  --font-family-base:
+    'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif;
+  --fw-regular: 300;
+  --fw-bold: 700;
+
+  /* Body */
+  --fs-body: 21px;
+  --lh-body: 30px;
+
+  /* Headings */
+  --fs-h1: 30px;
+  --lh-h1: 33px;
+  --ls-upper: 1.5px;
+
+  /* Layout */
+  --container: 1146px;
+  --radius: 6px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 30px; /* exception: 30px */
+  --space-7: 32px;
+  --space-8: 48px;
+  --space-9: 60px;
+  --space-10: 120px;
+
+  /* Aliases (semantic tokens) */
+  --gap: var(--space-6);
+  --section-y: var(--space-10);
+
+  /* Content width */
+  --container: 1080px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-on: 0;
+  }
+}

@@ -2,12 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Tasteology</title>
+    <meta name="description" content="Tasteology page structure" />
+    <!-- <link rel="canonical" href="https://example.com/" />
+    <link rel="icon" href="/favicon.ico" /> -->
   </head>
   <body>
-    <div id="app"></div>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header role="banner">
+      <h1 class="">Tasteology</h1>
+    </header>
+
+    <main id="main" role="main">
+      <h2>Main content</h2>
+    </main>
+
+    <footer role="contentinfo">
+      <small>Tasteology</small>
+    </footer>
+
+    <noscript>
+      This page loads gallery and cards content with JavaScript. Enable JS to see the interactive
+      content.
+    </noscript>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
