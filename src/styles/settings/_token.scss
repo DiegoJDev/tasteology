@@ -3,6 +3,7 @@
   --color-bg: #0f1414;
   --color-text: #ffffff;
   --color-accent: #cf1430;
+  --color-border: rgba(255, 255, 255, 0.2);
 
   /* Typography */
   --font-family-base:
@@ -13,16 +14,28 @@
 
   /* Body */
   --fs-body: 21px;
-  --lh-body: 30px;
+  --lh-body: 1.43;
 
   /* Headings */
   --fs-h1: 30px;
-  --lh-h1: 33px;
+  --lh-h1: 1.1;
+  --fs-h3: 24px;
+  --lh-h3: 30px;
+  --fs-small: 14px;
   --ls-upper: 1.5px;
 
   /* Layout */
-  --container: 1146px;
+  --container: 1185px;
   --radius: 6px;
+
+  /* Component sizes */
+  --size-card-width: 375px;
+  --size-card-height: 460px;
+  --size-card-title-height: 30px;
+  --size-card-body-height: 90px;
+  --size-feature-text-height: 330px;
+  --size-headline-height: 96px;
+  --size-section-title-height: 66px;
 
   /* Spacing */
   --space-1: 4px;
@@ -30,7 +43,7 @@
   --space-3: 12px;
   --space-4: 16px;
   --space-5: 24px;
-  --space-6: 30px; /* exception: 30px */
+  --space-6: 30px;
   --space-7: 32px;
   --space-8: 48px;
   --space-9: 60px;
@@ -39,9 +52,6 @@
   /* Aliases (semantic tokens) */
   --gap: var(--space-6);
   --section-y: var(--space-10);
-
-  /* Content width */
-  --container: 1080px;
 }
 
 @media (prefers-reduced-motion: reduce) {

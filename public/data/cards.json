@@ -1,0 +1,59 @@
+{
+  "title": "Taste the colours",
+  "cards": [
+    {
+      "id": "red",
+      "title": "Red",
+      "body": "Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.",
+      "link": {
+        "href": "#red",
+        "label": "Read more about Red"
+      },
+      "image": {
+        "alt": "Red jelly on a spoon",
+        "src": "/img/colors/red-751w.webp",
+        "sources": [
+          { "w": 376, "src": "/img/colors/red-376.webp" },
+          { "w": 751, "src": "/img/colors/red-751w.webp" },
+          { "w": 1126, "src": "/img/colors/red-1126w.webp" }
+        ]
+      }
+    },
+    {
+      "id": "green",
+      "title": "Green",
+      "body": "Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours",
+      "link": {
+        "href": "#green",
+        "label": "Read more about Green"
+      },
+      "image": {
+        "alt": "Green jelly on a spoon",
+        "src": "/img/colors/green-751w.webp",
+        "sources": [
+          { "w": 376, "src": "/img/colors/green-376.webp" },
+          { "w": 751, "src": "/img/colors/green-751w.webp" },
+          { "w": 1126, "src": "/img/colors/green-1126w.webp" }
+        ]
+      }
+    },
+    {
+      "id": "white",
+      "title": "White",
+      "body": "White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.",
+      "link": {
+        "href": "#white",
+        "label": "Read more about White"
+      },
+      "image": {
+        "alt": "White jelly on a spoon",
+        "src": "/img/colors/white-751w.webp",
+        "sources": [
+          { "w": 376, "src": "/img/colors/white-376w.webp" },
+          { "w": 751, "src": "/img/colors/white-751w.webp" },
+          { "w": 1126, "src": "/img/colors/white-1126w.webp" }
+        ]
+      }
+    }
+  ]
+}

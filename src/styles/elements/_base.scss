@@ -9,15 +9,14 @@ body {
   font-family: var(--font-family-base);
   font-weight: var(--fw-regular);
   font-size: var(--fs-body);
-  line-height: calc(var(--lh-body) / var(--fs-body));
+  line-height: var(--lh-body);
 }
 
 h1,
 .h1 {
   font-size: var(--fs-h1);
-  line-height: calc(var(--lh-h1) / var(--fs-h1));
+  line-height: var(--lh-h1);
   letter-spacing: var(--ls-upper);
-  text-transform: uppercase;
   font-weight: var(--fw-regular);
 }
 

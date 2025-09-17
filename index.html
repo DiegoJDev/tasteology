@@ -5,27 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tasteology</title>
     <meta name="description" content="Tasteology page structure" />
-    <!-- <link rel="canonical" href="https://example.com/" />
-    <link rel="icon" href="/favicon.ico" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header role="banner">
-      <h1 class="">Tasteology</h1>
-    </header>
+    <header role="banner"></header>
 
     <main id="main" role="main">
-      <h2>Main content</h2>
+      <!-- Feature= Gallery Block-->
+      <section class="feature section" data-module="gallery" aria-labelledby="feature-title">
+        <div class="container">
+          <!-- Left side: Gallery images grid -->
+          <div class="feature__media">
+            <ul class="feature__list" id="gallery-list"></ul>
+          </div>
+
+          <!-- Right side: Text content area -->
+          <article class="feature__copy" aria-describedby="feature-text">
+            <div id="feature-title">
+              <div class="headline">
+                <h1 class="section__title">What does cooking mean?</h1>
+              </div>
+            </div>
+
+            <div id="feature-text">
+              <p>
+                Is it simply applying heat to a food product? A way of making certain food safe to
+                eat? Or a way to create flavour and make food more appealing? This is just part of
+                what Hervé This, the father of molecular gastronomy, has dedicated his life to
+                finding out.
+              </p>
+            </div>
+
+            <div class="feature__cta">
+              <p class="kicker" id="feature-kicker">The Perfect Egg</p>
+              <p class="headline-strong" id="feature-headline">
+                Keep water between 67 and 68ºC for a flavourful, tender yolk
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Cards Block -->
+      <section class="cards section" data-module="cards" aria-labelledby="cards-title">
+        <div class="container">
+          <header class="cards__header">
+            <div class="headline">
+              <h1 id="cards-title" class="section__title">Taste the colours</h1>
+            </div>
+          </header>
+
+          <ul class="cards__grid" id="cards-list">
+            <!-- Base content for SEO/accessibility -->
+            <li class="card">
+              <article class="card__inner">
+                <figure class="card__media">
+                  <img
+                    class="card__img"
+                    src="/img/colors/red-751w.webp"
+                    alt="Red jelly on a spoon"
+                    width="375"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="card__caption">
+                  <h3 class="card__title">Red</h3>
+                  <p class="card__body">
+                    Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="card">
+              <article class="card__inner">
+                <figure class="card__media">
+                  <img
+                    class="card__img"
+                    src="/img/colors/green-751w.webp"
+                    alt="Green jelly on a spoon"
+                    width="375"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="card__caption">
+                  <h3 class="card__title">Green</h3>
+                  <p class="card__body">
+                    Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or
+                    acid flavours
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="card">
+              <article class="card__inner">
+                <figure class="card__media">
+                  <img
+                    class="card__img"
+                    src="/img/colors/white-751w.webp"
+                    alt="White jelly on a spoon"
+                    width="375"
+                    height="300"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="card__caption">
+                  <h3 class="card__title">White</h3>
+                  <p class="card__body">
+                    White foods evoke memories of salt and salty flavours, driving the expectation
+                    of a savoury treat.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
-    <footer role="contentinfo">
-      <small>Tasteology</small>
-    </footer>
+    <!-- Modal -->
+    <div
+      class="modal"
+      id="gallery-modal"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Cerrar modal">&times;</button>
+        <img class="modal__image" id="modal-image" src="" alt="" />
+      </div>
+    </div>
+
+    <!-- Accessibility: Hidden description for external links -->
+    <div id="external-link-desc" class="sr-only">(opens in new tab)</div>
 
     <noscript>
-      This page loads gallery and cards content with JavaScript. Enable JS to see the interactive
-      content.
+      This page loads gallery content with JavaScript. Enable JS to see the interactive content.
     </noscript>
 
     <script type="module" src="/src/main.ts"></script>

@@ -1,18 +1,46 @@
-[
-  {
-    "id": "g1",
-    "thumb": "/images/g1-800.jpg",
-    "full": "/images/g1-1600.jpg",
-    "alt": "Foto 1",
-    "width": 1200,
-    "height": 800
+{
+  "feature": {
+    "title": "WHAT DOES COOKING MEAN?",
+    "bodyHtml": "<p>Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...</p>",
+    "kicker": "THE PERFECT EGG",
+    "headline": "Keep water between 67 and 68ºC for a flavourful, tender yolk"
   },
-  {
-    "id": "g2",
-    "thumb": "/images/g2-800.jpg",
-    "full": "/images/g2-1600.jpg",
-    "alt": "Foto 2",
-    "width": 1200,
-    "height": 800
-  }
-]
+  "images": [
+    {
+      "id": "left",
+      "alt": "Pot simmering over fire.",
+      "width": 372,
+      "height": 600,
+      "sizes": "(min-width: 1200px) 372px, 90vw",
+      "sources": [
+        { "w": 372, "src": "/img/gallery/left-372w.webp" },
+        { "w": 744, "src": "/img/gallery/left-744w.webp" },
+        { "w": 1116, "src": "/img/gallery/left-1116w.webp" }
+      ]
+    },
+    {
+      "id": "rightTop",
+      "alt": "Chef plating ingredients on a tiled table.",
+      "width": 372,
+      "height": 300,
+      "sizes": "(min-width: 1200px) 372px, 90vw",
+      "sources": [
+        { "w": 372, "src": "/img/gallery/right-top-372w.webp" },
+        { "w": 744, "src": "/img/gallery/right-top-744w.webp" },
+        { "w": 1116, "src": "/img/gallery/right-top-1116w.webp" }
+      ]
+    },
+    {
+      "id": "rightBottom",
+      "alt": "Eggs cooked to different doneness in a tray.",
+      "width": 372,
+      "height": 300,
+      "sizes": "(min-width: 1200px) 372px, 90vw",
+      "sources": [
+        { "w": 372, "src": "/img/gallery/right-bottom-372w.webp" },
+        { "w": 744, "src": "/img/gallery/right-bottom-744w.webp" },
+        { "w": 1116, "src": "/img/gallery/right-bottom-1116w.webp" }
+      ]
+    }
+  ]
+}
