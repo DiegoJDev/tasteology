@@ -15,11 +15,33 @@
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <header role="banner"></header>
+    <header role="banner">
+      <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <div class="navbar__brand">
+            <a href="#top" class="navbar__logo">Tasteology</a>
+          </div>
+
+          <ul class="navbar__menu" role="menubar">
+            <li role="none">
+              <a href="#gallery" class="navbar__link" role="menuitem">Gallery</a>
+            </li>
+            <li role="none">
+              <a href="#cards" class="navbar__link" role="menuitem">Cards</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <main id="main" role="main">
       <!-- Feature= Gallery Block-->
-      <section class="feature section" data-module="gallery" aria-labelledby="feature-title">
+      <section
+        id="gallery"
+        class="feature section"
+        data-module="gallery"
+        aria-labelledby="feature-title"
+      >
         <div class="container">
           <!-- Left side: Gallery images grid -->
           <div class="feature__media">
@@ -54,7 +76,7 @@
       </section>
 
       <!-- Cards Block -->
-      <section class="cards section" data-module="cards" aria-labelledby="cards-title">
+      <section id="cards" class="cards section" data-module="cards" aria-labelledby="cards-title">
         <div class="container">
           <header class="cards__header">
             <div class="headline">
@@ -133,6 +155,19 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__content">
+          <p class="footer__text">
+            &copy; 2025 <strong>Diego Cárdenas</strong>. Built with heart ❤️
+          </p>
+          <p class="footer__tagline">
+            Exploring the intersection of taste, technology, and design.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <!-- Modal -->
     <div

@@ -2,7 +2,9 @@
 @use './generic/reset';
 @use './elements/base';
 @use './objects/layout';
+@use './components/navbar';
 @use './components/feature';
 @use './components/cards';
 @use './components/modal';
+@use './components/footer';
 @use './utilities/a11y';
