@@ -26,7 +26,7 @@ export class AnalyticsService {
 
     this.events.push(event);
 
-    console.group('🔗 Card Link Click Event');
+    console.group('Card Link Click Event');
     console.log('Event Details:', {
       cardId: event.cardId,
       linkType: event.linkType,
@@ -51,7 +51,7 @@ export class AnalyticsService {
   private sendToAnalytics(event: LinkClickEvent): void {
     // You can implement this method to send the event to your analytics service, i.e: Google Analytics, Hotjar, etc.,
 
-    console.log('📊 Analytics Event Sent:', {
+    console.log('Analytics Event Sent:', {
       service: 'placeholder',
       eventId: `card-click-${Date.now()}`,
       data: event,
