@@ -15,6 +15,11 @@
     justify-content: space-between;
     padding-block: var(--space-4);
     min-height: 60px;
+
+    @media (max-width: 767px) {
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
   }
 }
 
@@ -48,7 +53,9 @@
   padding: 0;
 
   @media (max-width: 767px) {
-    gap: var(--space-6);
+    gap: var(--space-3);
+    flex-shrink: 0;
+    margin-left: auto;
   }
 }
 
@@ -62,6 +69,11 @@
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius);
   transition: all 0.3s ease;
+
+  @media (max-width: 767px) {
+    font-size: var(--fs-small);
+    padding: var(--space-2);
+  }
 
   &::after {
     content: '';

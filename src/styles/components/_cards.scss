@@ -12,6 +12,13 @@
     display: flex;
     justify-content: center;
     margin-block: 60px 40px;
+
+    @media (max-width: 767px) {
+      margin-block: 40px 30px;
+      padding-inline: 0;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .headline {
@@ -24,6 +31,12 @@
     align-items: flex-start;
     gap: 10px;
     border-bottom: solid 1.2px #fff;
+
+    @media (max-width: 767px) {
+      margin-inline: auto;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   .section__title {
@@ -53,6 +66,13 @@
 
     grid-template-columns: 1fr;
     justify-content: center;
+    justify-items: center;
+
+    @media (max-width: 767px) {
+      padding-inline: 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
   }
 
   @media (min-width: 768px) {
