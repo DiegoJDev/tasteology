@@ -15,10 +15,18 @@
 }
 
 .feature__media {
-  order: -1;
+  order: 1;
 
   @media (min-width: 768px) {
     order: 0;
+  }
+}
+
+.feature__copy {
+  order: 0;
+
+  @media (min-width: 768px) {
+    order: 1;
   }
 }
 
