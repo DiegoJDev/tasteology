@@ -14,9 +14,20 @@ export default class Gallery {
   }
 
   async init() {
-    const data = await gateway.getGallery();
-    this.renderCopy(data);
-    this.renderImages(data.images);
+    this.showLoading();
+
+    try {
+      const data = await gateway.getGallery();
+      this.hideLoading();
+      this.renderCopy(data);
+      this.renderImages(data.images);
+      this.addFadeInAnimation();
+    } catch (error) {
+      this.hideLoading();
+      this.showError('Failed to load gallery content');
+      // eslint-disable-next-line no-console
+      console.error('Gallery loading error:', error);
+    }
   }
 
   private renderCopy(data: GalleryPayload) {
@@ -88,5 +99,48 @@ export default class Gallery {
 
   private escapeAttr(s: string) {
     return s.replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+  }
+
+  private showLoading(): void {
+    if (!this.listEl) return;
+
+    this.listEl.innerHTML = `
+      <div class="skeleton skeleton-gallery">
+        <div class="skeleton skeleton-image-large"></div>
+        <div class="skeleton skeleton-image-small"></div>
+        <div class="skeleton skeleton-image-small"></div>
+      </div>
+    `;
+  }
+
+  private hideLoading(): void {
+    const skeleton = this.root.querySelector('.skeleton-gallery');
+    if (skeleton) {
+      skeleton.remove();
+    }
+  }
+
+  private showError(message: string): void {
+    if (!this.listEl) return;
+
+    this.listEl.innerHTML = `
+      <div class="loading">
+        <div style="text-align: center; color: var(--color-accent);">
+          <p>⚠️ ${message}</p>
+          <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--color-accent); color: white; border: none; border-radius: var(--radius); cursor: pointer;">
+            Try Again
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  private addFadeInAnimation(): void {
+    const images = this.root.querySelectorAll('.feature__item');
+    images.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add('fade-in');
+      }, index * 100);
+    });
   }
 }
