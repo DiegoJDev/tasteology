@@ -25,3 +25,5 @@ dist-ssr
 
 # notes
 falta.md
+.vercel
+setup-vercel-secrets.md
