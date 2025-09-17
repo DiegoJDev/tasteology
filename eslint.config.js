@@ -12,6 +12,23 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
+      globals: {
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        fetch: 'readonly',
+
+        // DOM types
+        HTMLElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        HTMLImageElement: 'readonly',
+        HTMLButtonElement: 'readonly',
+        HTMLLIElement: 'readonly',
+        HTMLUListElement: 'readonly',
+        NodeListOf: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
