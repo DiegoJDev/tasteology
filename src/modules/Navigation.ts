@@ -14,7 +14,6 @@ export class Navigation {
   private init(): void {
     this.setupSmoothScroll();
     this.setupActiveStates();
-    this.setupScrollBehavior();
   }
 
   private setupSmoothScroll(): void {
@@ -79,15 +78,5 @@ export class Navigation {
     if (activeLink) {
       activeLink.classList.add('navbar__link--active');
     }
-  }
-
-  private setupScrollBehavior(): void {
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-
-      lastScrollY = currentScrollY;
-    });
   }
 }
