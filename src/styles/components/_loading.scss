@@ -1,0 +1,180 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+
+  &--fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg);
+    z-index: 1000;
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+  &--small {
+    width: 24px;
+    height: 24px;
+    border-width: 2px;
+  }
+
+  &--large {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: var(--space-4);
+  font-family: var(--font-family-base);
+  font-size: var(--fs-small);
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+// Skeleton loading
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.8s infinite ease-in-out;
+  border-radius: var(--radius);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.card.skeleton {
+  .skeleton-card {
+    width: 100%;
+    height: var(--size-card-height);
+    display: flex;
+    flex-direction: column;
+
+    .skeleton-image {
+      width: 100%;
+      height: var(--card-img-h);
+      border-radius: var(--radius);
+      margin-bottom: var(--space-4);
+    }
+
+    .skeleton-caption {
+      padding: 0 var(--space-6);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .skeleton-title {
+      width: 70%;
+      height: 24px;
+      border-radius: 4px;
+    }
+
+    .skeleton-text {
+      height: 16px;
+      border-radius: 3px;
+
+      &:nth-child(2) {
+        width: 90%;
+      }
+
+      &:nth-child(3) {
+        width: 75%;
+      }
+    }
+  }
+}
+
+// Gallery skeleton - let parent .container handle sizing
+.skeleton-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: var(--grid-gap);
+  width: 100%;
+  min-height: 500px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 600px;
+  }
+
+  .skeleton-image-large {
+    border-radius: var(--radius);
+    min-height: 200px;
+
+    @media (min-width: 768px) {
+      grid-column: 1;
+      grid-row: 1 / -1;
+      min-height: 100%;
+    }
+  }
+
+  .skeleton-image-small {
+    border-radius: var(--radius);
+    min-height: 200px;
+
+    @media (min-width: 768px) {
+      grid-column: 2;
+      min-height: calc((100% - var(--grid-gap)) / 2);
+
+      &:first-of-type {
+        grid-row: 1;
+      }
+
+      &:last-of-type {
+        grid-row: 2;
+      }
+    }
+  }
+}
+
+// Fade in animation for loaded content
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
